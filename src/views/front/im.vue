@@ -20,7 +20,7 @@
       <div style="width: 800px; background-color: white;
                     border-radius: 5px; box-shadow: 0 0 10px #ccc">
         <div style="text-align: center; line-height: 50px;">
-          Web聊天室（{{ chatUser }}）
+          聊天室（{{ chatUser }}）
         </div>
         <div style="height: 350px; overflow:auto; border-top: 1px solid #ccc"
              v-html="content"></div>
