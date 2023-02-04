@@ -14,7 +14,12 @@
             <li @click="upSearch('/front/article', 2)"><a :class="{active: showTab === 2}">博客</a> </li>
             <li @click="upSearch('/front/category', 3)"><a :class="{active: showTab === 3}">专题</a> </li>
             <li @click="upSearch('/front/im', 4)"><a :class="{active: showTab === 4}">私信</a> </li>
-            <li @click="upSearch('/report', 5)"><a :class="{active: showTab === 5}">实验报告</a> </li>
+            <li @click="upSearch('/report', 5)">
+              <a :class="{active: showTab === 5}"
+                 href="https://github.com/Young-Allen/vue-springboot-Blog/blob/main/web%E5%AE%9E%E9%AA%8C%E6%96%87%E6%A1%A3.md"
+                 target="_blank">实验报告</a>
+            </li>
+
           </ul>
         </div>
 
@@ -132,10 +137,6 @@ export default {
     ...mapActions(['getBlogData', 'updateSearch']),
 
     async upSearch (path, id) {
-      if (id === 5) {
-        this.$router.push('/front/articleDetail?id=130')
-      }
-
       this.setShowTab(id)
       console.log(path);
       this.setSearch("")
